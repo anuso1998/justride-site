@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <title>Contact Us | JUSTRIDE LLC</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- AOS Animate on Scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
   <header>
     <img src="assets/Logo Brandmark (1).png" alt="JUSTRIDE Logo Light" class="logo logo-light" />
@@ -18,9 +22,9 @@
   </header>
 
   <main>
-    <section class="content">
+    <section class="content" data-aos="fade-up">
       <h1>Contact Us</h1>
-      <p>Have questions? Reach out to our HR team — we’re here to help!</p>
+      <p>Have questions? Reach out — our HR team is here to help!</p>
 
       <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact" />
@@ -38,14 +42,4 @@
         <label for="message">Message</label>
         <textarea name="message" id="message" rows="5" required></textarea>
 
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>📞 240-421-8545 | 7617 NE Easy St, Kansas City, MO 64118</p>
-    <p>📧 HR@justrideinc.com</p>
-  </footer>
-</body>
-</html>
+        <button type="submit" class="btn">Send Message
