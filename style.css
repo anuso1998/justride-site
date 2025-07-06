@@ -114,3 +114,53 @@ p {
   nav a { color: #fff; }
   .logo-dark { display: inline; }
 }
+/* Contact form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: orange;
+}
+
+button.btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: orange;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.content {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+footer {
+  margin-top: 50px;
+}
+
