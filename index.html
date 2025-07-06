@@ -4,10 +4,13 @@
   <meta charset="UTF-8" />
   <title>JUSTRIDE LLC</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- AOS Animate on Scroll CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
   <header>
-    <!-- Auto-switch logos -->
     <img src="assets/Logo Brandmark (1).png" alt="JUSTRIDE Logo Light" class="logo logo-light" />
     <img src="assets/JUSTRIDE-03.png" alt="JUSTRIDE Logo Dark" class="logo logo-dark" />
 
@@ -19,9 +22,27 @@
   </header>
 
   <main>
-    <section class="hero">
-      <h1>Your Trusted Partner for Safe, Reliable Non-Emergency Transportation.</h1>
-      <a href="jobs.html" class="btn">View Openings</a>
+    <section class="hero" data-aos="fade-in">
+      <div class="hero-text">
+        <h1>Your Trusted Partner for Safe, Reliable Non-Emergency Transportation</h1>
+        <p>Connecting members to care with dignity, respect, and reliability.</p>
+        <a href="jobs.html" class="btn">View Openings</a>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature" data-aos="fade-up">
+        <h2>Who We Are</h2>
+        <p>JUSTRIDE is committed to providing safe, dependable, and efficient transportation solutions to those in need.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="200">
+        <h2>Our Mission</h2>
+        <p>From routine appointments to urgent rides, we ensure every trip is handled with care and respect.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="400">
+        <h2>How We Do It</h2>
+        <p>Our dedicated team and reliable drivers make transportation easy and worry-free for everyone.</p>
+      </div>
     </section>
   </main>
 
@@ -29,5 +50,18 @@
     <p>📞 240-421-8545 | 7617 NE Easy St, Kansas City, MO 64118</p>
     <p>📧 HR@justrideinc.com</p>
   </footer>
+
+  <!-- AOS Animate on Scroll JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Page fade-in on load -->
+  <script>
+    window.addEventListener("load", function() {
+      document.body.classList.add("loaded");
+    });
+  </script>
 </body>
 </html>
