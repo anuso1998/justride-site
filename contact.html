@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us | JUSTRIDE LLC</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="assets/Logo Brandmark (1).png" alt="JUSTRIDE Logo Light" class="logo logo-light" />
+    <img src="assets/JUSTRIDE-03.png" alt="JUSTRIDE Logo Dark" class="logo logo-dark" />
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content">
+      <h1>Contact Us</h1>
+      <p>Have questions? Reach out to our HR team — we’re here to help!</p>
+
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+
+        <p hidden>
+          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>📞 240-421-8545 | 7617 NE Easy St, Kansas City, MO 64118</p>
+    <p>📧 HR@justrideinc.com</p>
+  </footer>
+</body>
+</html>
