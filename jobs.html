@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Jobs | JUSTRIDE LLC</title>
+  <title>Job Openings | JUSTRIDE LLC</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- AOS Animate on Scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
   <header>
     <img src="assets/Logo Brandmark (1).png" alt="JUSTRIDE Logo Light" class="logo logo-light" />
     <img src="assets/JUSTRIDE-03.png" alt="JUSTRIDE Logo Dark" class="logo logo-dark" />
-
     <nav>
       <a href="index.html">Home</a>
       <a href="jobs.html">Jobs</a>
@@ -18,16 +20,26 @@
   </header>
 
   <main>
-    <section class="content">
-      <h1>Job Openings</h1>
+    <section class="content" data-aos="fade-up">
+      <h1>Current Job Openings</h1>
+      <p>We’re always looking for reliable, friendly people to join the JustRide family!</p>
 
-      <h2>Driver (Independent Contractor)</h2>
-      <p>Flexible hours | Earn up to $1000/week | Must pass background and drug test.</p>
+      <div class="job-listing">
+        <h2>🚗 Driver (Independent Contractor)</h2>
+        <p>Flexible hours | Earn up to $1000/week | Must pass background and drug test. Provide safe, dependable transportation for members.</p>
+      </div>
 
-      <h2>Dispatcher</h2>
-      <p>Coordinate trips and drivers | Basic computer skills required.</p>
+      <div class="job-listing">
+        <h2>📞 Dispatcher</h2>
+        <p>Coordinate trips, handle scheduling, and support our drivers. Strong communication and basic computer skills required.</p>
+      </div>
 
-      <p>📧 To apply, please email HR at <a href="mailto:HR@justrideinc.com">HR@justrideinc.com</a></p>
+      <div class="job-listing">
+        <h2>🗂️ Administrative Support</h2>
+        <p>Help with daily office tasks, record keeping, and driver coordination. Great for detail-oriented candidates.</p>
+      </div>
+
+      <p>📧 To apply, email your resume or inquiries to <a href="mailto:HR@justrideinc.com">HR@justrideinc.com</a></p>
     </section>
   </main>
 
@@ -35,5 +47,16 @@
     <p>📞 240-421-8545 | 7617 NE Easy St, Kansas City, MO 64118</p>
     <p>📧 HR@justrideinc.com</p>
   </footer>
+
+  <!-- AOS Animate on Scroll -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <!-- Page fade-in -->
+  <script>
+    window.addEventListener("load", function() {
+      document.body.classList.add("loaded");
+    });
+  </script>
 </body>
 </html>

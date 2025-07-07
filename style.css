@@ -43,8 +43,18 @@ nav a:hover {
   padding: 180px 20px;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
 .hero-text {
-  background: rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
   display: inline-block;
   padding: 20px 40px;
   border-radius: 8px;
@@ -120,6 +130,9 @@ form {
   flex-direction: column;
   max-width: 500px;
   margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
 }
 
 label {
@@ -162,5 +175,31 @@ button.btn:hover {
 
 footer {
   margin-top: 50px;
+}
+/* Coming Soon banner above hero */
+.coming-soon-banner {
+  background: orange;
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+}
+.job-listing {
+  background: #f9f9f9;
+  margin: 30px auto;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.job-listing h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.job-listing p {
+  color: #555;
 }
 
