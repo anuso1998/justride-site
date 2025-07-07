@@ -15,7 +15,11 @@
     <img src="assets/JUSTRIDE-03.png" alt="JUSTRIDE Logo Dark" class="logo logo-dark" />
   </a>
 
-  <nav>
+  <!-- Hamburger toggle -->
+  <button class="menu-toggle">☰</button>
+
+  <!-- Nav wrapped in .mobile-nav -->
+  <nav class="mobile-nav">
     <a href="index.html">Home</a>
     <a href="jobs.html">Jobs</a>
     <a href="contact.html">Contact</a>
@@ -78,3 +82,12 @@
   </script>
 </body>
 </html>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.mobile-nav');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+</script>
+

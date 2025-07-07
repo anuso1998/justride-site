@@ -36,6 +36,45 @@ nav a:hover {
   height: 70px; /* Bigger logo for desktop */
 }
 
+/* ☰ button always visible */
+.menu-toggle {
+  display: block;
+  background: none;
+  font-size: 28px;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* Hide nav by default */
+nav.mobile-nav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Show nav when toggled */
+nav.mobile-nav.show {
+  display: flex;
+}
+
+nav.mobile-nav a {
+  margin: 10px 0;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Keep header stacking nicely */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
 /* === Hero Section === */
 .hero {
   background: url('assets/hero-bg.jpeg') center/cover no-repeat;
