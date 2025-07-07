@@ -11,32 +11,29 @@ body.loaded {
   opacity: 1;
 }
 
-header {
-  display: flex;
-  justify-content: space-between; /* LOGO left, hamburger/menu right */
-  align-items: center;
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* show hamburger */
+  }
 
-.logo {
-  height: 70px; /* Bigger for desktop */
-}
+  nav {
+    display: none; /* hide nav links */
+    flex-direction: column;
+    background: #000;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 150px;
+    padding: 10px;
+  }
 
-.menu-toggle {
-  display: none;  /* Only visible on mobile */
-  font-size: 32px;
-  cursor: pointer;
+  nav.show {
+    display: flex; /* show nav links when toggled */
+    justify-content: flex-end; /* Or space-between if you want logo + nav */
+    align-items: center;
+    gap: 20px;        /* space between links */
+  }
 }
-
-/* DESKTOP nav inline */
-nav {
-  display: flex;
-  gap: 20px;
-}
-
 /* === HERO === */
 .hero {
   background: url('assets/hero-bg.jpeg') center/cover no-repeat;
@@ -216,7 +213,7 @@ button.btn:hover {
   }
 
   nav {
-    display: none;
+    display: none; /* hide nav links */
     flex-direction: column;
     background: #000;
     position: absolute;
@@ -226,12 +223,7 @@ button.btn:hover {
     padding: 10px;
   }
 
-  nav.active {
-    display: flex;
+    nav.show {
+      display: flex; /* show nav links when toggled */
+    }
   }
-
-  nav a {
-    margin: 10px 0;
-    font-size: 18px;
-  }
-}
