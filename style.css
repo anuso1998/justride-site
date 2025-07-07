@@ -230,48 +230,48 @@ footer {
   }
 
   .hero {
-    padding: 120px 20px;
+    padding: 100px 15px;
     text-align: center;
   }
 
   .hero-text {
-    padding: 20px 15px;
+    padding: 20px 10px;
     font-size: 18px;
-    line-height: 1.5;
+  }
+
+  .hero-text h1 {
+    font-size: 22px;
+    line-height: 1.4;
   }
 
   .hero .btn {
     margin-top: 15px;
-    width: 80%;
+    width: 90%;
+    max-width: 300px;
     font-size: 16px;
   }
 
-  .announcement-bar {
-    font-size: 14px;
-    padding: 8px;
-  }
-
   .features {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    flex-direction: column;  /* stack vertically */
     padding: 30px 15px;
-    box-sizing: border-box;
   }
 
   .feature {
-    width: 100%;
-    max-width: 600px;
+    flex: 1 1 100%;
+    max-width: 100%;
     margin: 15px 0;
     padding: 20px;
-    box-sizing: border-box;
+    font-size: 16px;
   }
 
   footer {
     font-size: 14px;
-    padding: 20px 10px;
+    padding: 30px 15px;
     text-align: center;
   }
-}
 
+  .coming-soon-banner {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
