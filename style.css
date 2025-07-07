@@ -248,32 +248,76 @@ button.btn:hover {
   text-align: center;
 }
 
-/* === Mobile Responsive === */
+header {
+  display: flex;
+  justify-content: space-between;  /* ➜ Logo left, ☰ right */
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.menu-toggle {
+  display: block;   /* Always visible */
+  background: none;
+  font-size: 28px;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+nav.mobile-nav {
+  display: none;   /* Hidden until ☰ clicked */
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+nav.mobile-nav.show {
+  display: flex;
+}
+
+nav.mobile-nav a {
+  margin: 10px 0;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* === Mobile Styles === */
 @media (max-width: 768px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Header stacks vertically */
   header {
-    flex-direction: column;
+    flex-direction: column;       /* stacks logo and ☰ vertically */
     align-items: center;
-    padding: 15px;
     text-align: center;
+    padding: 20px 15px;
   }
 
   .logo {
-    height: 60px; /* Logo slightly smaller on mobile */
+    height: 60px;                 /* smaller logo for mobile */
   }
 
-  nav {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  .menu-toggle {
+    margin-top: 10px;             /* space between logo and ☰ */
+  }
+
+  nav.mobile-nav {
+    flex-direction: column;       /* stacked nav links */
+    align-items: center;          /* center align links */
     margin-top: 10px;
   }
 
-  nav a {
+  nav.mobile-nav a {
     font-size: 18px;
+    margin: 8px 0;
   }
 
   .hero {
-    padding: 120px 20px;
+    padding: 120px 20px;          /* hero spacing for mobile */
+    text-align: center;
   }
 
   .hero-text {
@@ -282,8 +326,13 @@ button.btn:hover {
     line-height: 1.5;
   }
 
-  .hero-text h1 { font-size: 22px; }
-  .hero-text p { font-size: 16px; }
+  .hero-text h1 {
+    font-size: 22px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
 
   .btn {
     width: 90%;
@@ -296,7 +345,7 @@ button.btn:hover {
   }
 
   .features {
-    flex-direction: column !important;
+    flex-direction: column !important;  /* stack features vertically */
     align-items: center;
     width: 100%;
     padding: 30px 15px;
@@ -311,9 +360,14 @@ button.btn:hover {
     box-sizing: border-box;
   }
 
-    footer {
-      font-size: 14px;
-      padding: 20px 10px;
-      text-align: center;
-    }
+  form {
+    max-width: 95%;
+    padding: 20px;
   }
+
+  footer {
+    font-size: 14px;
+    padding: 20px 10px;
+    text-align: center;
+  }
+}
