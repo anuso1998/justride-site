@@ -41,6 +41,7 @@ nav a:hover {
   color: #fff;
   text-align: center;
   padding: 180px 20px;
+  position: relative;
 }
 
 .hero::before {
