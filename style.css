@@ -200,3 +200,25 @@ button.btn:hover {
   padding: 50px 20px;
   text-align: center;
 }
+
+/* === Automatic Light/Dark Theme === */
+body {
+  background: #fff;
+  color: #000;
+}
+
+.logo-light, .logo-dark {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  body { background: #fff; color: #000; }
+  nav a { color: #000; }
+  .logo-light { display: inline; }
+}
+
+@media (prefers-color-scheme: dark) {
+  body { background: #000; color: #fff; }
+  nav a { color: #fff; }
+  .logo-dark { display: inline; }
+}
