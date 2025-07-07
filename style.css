@@ -11,39 +11,32 @@ body.loaded {
   opacity: 1;
 }
 
-/* === HEADER & NAV === */
+/* === Header & Nav === */
 header {
   display: flex;
-  justify-content: space-between;  /* logo left, menu right */
+  justify-content: space-between;  /* logo left, nav right */
   align-items: center;
   padding: 20px 40px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #fff; /* Or transparent */
 }
 
 .logo {
-  height: 60px;    /* good size for desktop */
+  height: 60px;
   width: auto;
   max-height: 80px;
 }
 
-.menu-toggle {
-  display: none;   /* hidden by default, shows on mobile */
-  font-size: 32px;
-  cursor: pointer;
-}
-
 nav {
-  display: flex;   /* desktop shows nav inline */
+  display: flex;
   gap: 20px;
 }
 
 nav a {
   text-decoration: none;
-  transition: all 0.3s ease;
   margin-left: 20px;
+  transition: all 0.3s ease;
   color: inherit;
 }
 
@@ -51,7 +44,7 @@ nav a:hover {
   opacity: 0.7;
 }
 
-/* === HERO === */
+/* === Hero === */
 .hero {
   background: url('assets/hero-bg.jpeg') center/cover no-repeat;
   color: #fff;
@@ -132,6 +125,19 @@ footer {
   margin-top: 50px;
 }
 
+/* === Light/Dark Mode === */
+.logo-light, .logo-dark { display: none; }
+
+@media (prefers-color-scheme: light) {
+  .logo-light { display: inline; }
+  .logo-dark { display: none; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo-dark { display: inline; }
+  .logo-light { display: none; }
+}
+
 /* === Contact Form === */
 form {
   display: flex;
@@ -190,47 +196,7 @@ button.btn:hover {
 .job-listing h2 { margin-top: 0; color: #333; }
 .job-listing p { color: #555; }
 
-/* === Light/Dark Logo Switch === */
-.logo-light, .logo-dark { display: none; }
-
-@media (prefers-color-scheme: light) {
-  .logo-light { display: inline; }
-  .logo-dark { display: none; }
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo-dark { display: inline; }
-  .logo-light { display: none; }
-}
-
-/* === MOBILE MENU === */
-@media (max-width: 768px) {
-  .logo {
-    height: 40px;  /* smaller for mobile */
-  }
-
-  .menu-toggle {
-    display: block; /* show hamburger icon */
-  }
-
-  nav {
-    display: none;  /* hide nav links by default */
-    flex-direction: column;
-    background: #000;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    width: 150px;
-    padding: 10px;
-  }
-
-  nav.show {
-    display: flex;  /* show nav when toggled */
-  }
-
-  nav a {
-    color: #fff;
-    margin: 10px 0;
-    font-size: 18px;
-  }
+.content {
+  padding: 50px 20px;
+  text-align: center;
 }
