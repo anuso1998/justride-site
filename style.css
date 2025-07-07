@@ -11,29 +11,46 @@ body.loaded {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block; /* show hamburger */
-  }
-
-  nav {
-    display: none; /* hide nav links */
-    flex-direction: column;
-    background: #000;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    width: 150px;
-    padding: 10px;
-  }
-
-  nav.show {
-    display: flex; /* show nav links when toggled */
-    justify-content: flex-end; /* Or space-between if you want logo + nav */
-    align-items: center;
-    gap: 20px;        /* space between links */
-  }
+/* === HEADER & NAV === */
+header {
+  display: flex;
+  justify-content: space-between;  /* logo left, menu right */
+  align-items: center;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff; /* Or transparent */
 }
+
+.logo {
+  height: 60px;    /* good size for desktop */
+  width: auto;
+  max-height: 80px;
+}
+
+.menu-toggle {
+  display: none;   /* hidden by default, shows on mobile */
+  font-size: 32px;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;   /* desktop shows nav inline */
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-left: 20px;
+  color: inherit;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
 /* === HERO === */
 .hero {
   background: url('assets/hero-bg.jpeg') center/cover no-repeat;
@@ -115,39 +132,6 @@ footer {
   margin-top: 50px;
 }
 
-/* === Light/Dark Logo Switch === */
-.logo-light, .logo-dark { display: none; }
-
-@media (prefers-color-scheme: light) {
-  body { background: #fff; color: #000; }
-  nav a { color: #000; }
-  .logo-light { display: inline; }
-}
-
-@media (prefers-color-scheme: dark) {
-  body { background: #000; color: #fff; }
-  nav a { color: #fff; }
-  .logo-dark { display: inline; }
-}
-
-nav a {
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-nav a:hover {
-  opacity: 0.7;
-}
-
-nav a {
-  margin-left: 20px;
-}
-
-.content {
-  padding: 50px 20px;
-  text-align: center;
-}
-
 /* === Contact Form === */
 form {
   display: flex;
@@ -206,14 +190,31 @@ button.btn:hover {
 .job-listing h2 { margin-top: 0; color: #333; }
 .job-listing p { color: #555; }
 
+/* === Light/Dark Logo Switch === */
+.logo-light, .logo-dark { display: none; }
+
+@media (prefers-color-scheme: light) {
+  .logo-light { display: inline; }
+  .logo-dark { display: none; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo-dark { display: inline; }
+  .logo-light { display: none; }
+}
+
 /* === MOBILE MENU === */
 @media (max-width: 768px) {
+  .logo {
+    height: 40px;  /* smaller for mobile */
+  }
+
   .menu-toggle {
-    display: block; /* show hamburger */
+    display: block; /* show hamburger icon */
   }
 
   nav {
-    display: none; /* hide nav links */
+    display: none;  /* hide nav links by default */
     flex-direction: column;
     background: #000;
     position: absolute;
@@ -223,7 +224,13 @@ button.btn:hover {
     padding: 10px;
   }
 
-    nav.show {
-      display: flex; /* show nav links when toggled */
-    }
+  nav.show {
+    display: flex;  /* show nav when toggled */
   }
+
+  nav a {
+    color: #fff;
+    margin: 10px 0;
+    font-size: 18px;
+  }
+}
