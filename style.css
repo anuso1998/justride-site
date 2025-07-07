@@ -222,3 +222,15 @@ body {
   nav a { color: #fff; }
   .logo-dark { display: inline; }
 }
+
+/* === Clickable Logo Container === */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  display: block;
+  height: 60px; /* optional, match your .logo height if needed */
+  width: auto;
+}
