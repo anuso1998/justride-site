@@ -252,15 +252,20 @@ footer {
   }
 
   .features {
+    display: flex;
     flex-direction: column;
-    padding: 30px 10px;
+    align-items: center;
+    width: 100%;
+    padding: 30px 15px;
+    box-sizing: border-box;
   }
 
   .feature {
-    max-width: 95%;
-    margin: 10px auto;
+    width: 100%;
+    max-width: 600px;
+    margin: 15px 0;
     padding: 20px;
-    font-size: 16px;
+    box-sizing: border-box;
   }
 
   footer {
