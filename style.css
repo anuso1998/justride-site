@@ -20,7 +20,20 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  background:transparent;
 }
+@media (prefers-color-scheme: light) {
+  header {
+    background: #fff;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  header {
+    background: #000;
+  }
+}
+
 
 .logo-container {
   display: flex;
