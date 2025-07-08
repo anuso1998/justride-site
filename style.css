@@ -5,6 +5,8 @@ body {
   line-height: 1.6;
   opacity: 0;
   transition: opacity 0.8s ease;
+  background: #fff;   /* light by default */
+  color: #000;
 }
 
 body.loaded {
@@ -20,20 +22,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background:transparent;
+  background: #fff;  /* light by default */
 }
-@media (prefers-color-scheme: light) {
-  header {
-    background: #fff;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  header {
-    background: #000;
-  }
-}
-
 
 .logo-container {
   display: flex;
@@ -53,14 +43,14 @@ nav {
 nav a {
   text-decoration: none;
   transition: all 0.3s ease;
-  color: inherit;
+  color: #000;  /* light by default */
 }
 
 nav a:hover {
   opacity: 0.7;
 }
 
-/* === HERO === */
+/* === Hero === */
 .hero {
   background: url('assets/hero-bg.jpeg') center/cover no-repeat;
   color: #fff;
@@ -204,18 +194,22 @@ button.btn:hover {
   text-align: center;
 }
 
-/* === Light/Dark Logo Switch === */
+/* === Light/Dark Logo Switch & Theme === */
 .logo-light,
 .logo-dark {
   display: none;
 }
 
 @media (prefers-color-scheme: light) {
+  body { background: #fff; color: #000; }
+  header { background: #fff; }
+  nav a { color: #000; }
   .logo-light { display: inline; }
-  .logo-dark { display: none; }
 }
 
 @media (prefers-color-scheme: dark) {
-  .logo-light { display: none; }
+  body { background: #000; color: #fff; }
+  header { background: #000; }
+  nav a { color: #fff; }
   .logo-dark { display: inline; }
 }
